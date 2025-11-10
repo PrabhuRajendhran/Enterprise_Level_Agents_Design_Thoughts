@@ -1,0 +1,77 @@
+## 🧠 Agent Maturity Roadmap: From Level 0 to Level 5
+
+| Level | Agent Capability | Strategic Focus | Key Gaps to Address |
+|-------|------------------|------------------|---------------------|
+| **Level 0** | **Prompt-only agents** | Static LLM wrappers with hardcoded prompts | No memory, no tools, no orchestration |
+| **Level 1** | **Tool-augmented agents** | Basic function calling (e.g., search, calculator) | No planning, no control flow, brittle logic |
+| **Level 2** | **Orchestrated agents** | Task decomposition, tool routing, retries | No memory, no governance, no modularity |
+| **Level 3** | **Memory-enabled agents** | Working + long-term memory, context-aware | No personalization, no audit, no lifecycle |
+| **Level 4** | **Multi-agent systems** | Planner + executor agents, collaboration | No control plane, no cost/compliance guardrails |
+| **Level 5** | **Self-evolving agents** | Reflection, learning, adaptation, optimization | No feedback loops, no CI/CD, no policy engine |
+
+---
+
+## 🧩 Curated Steps to Progress Through Each Level
+
+### 🔹 Level 0 → Level 1: Tool-Augmented Agents
+- ✅ Define callable tools (OpenAPI, LangChain schema)
+- ✅ Build tool registry with metadata (latency, cost, domain)
+- ✅ Enable basic function calling via LLM orchestration
+- 🔧 Missing: sandboxing, error handling, fallback logic
+
+---
+
+### 🔹 Level 1 → Level 2: Orchestrated Agents
+- ✅ Introduce orchestration layer (LangChain, Semantic Kernel, custom)
+- ✅ Implement control flow: retries, branching, conditional logic
+- ✅ Modularize agent logic into reusable components
+- 🔧 Missing: agent registry, lifecycle management, versioning
+
+---
+
+### 🔹 Level 2 → Level 3: Memory-Enabled Agents
+- ✅ Add working memory (session context, scratchpad)
+- ✅ Add long-term memory (vector DB + structured store)
+- ✅ Enable memory retrieval and update logic
+- 🔧 Missing: memory governance, user-specific context, ABAC policies
+
+---
+
+### 🔹 Level 3 → Level 4: Multi-Agent Systems
+- ✅ Define agent roles (planner, executor, verifier, retriever)
+- ✅ Enable inter-agent communication and task handoff
+- ✅ Introduce agent registry and ownership model
+- 🔧 Missing: unified control plane, IAM, audit trail, cost guardrails
+
+---
+
+### 🔹 Level 4 → Level 5: Self-Evolving Agents
+- ✅ Add reflection loop (evaluate, revise, retry)
+- ✅ Integrate feedback signals (user ratings, success metrics)
+- ✅ Enable agent tuning via CI/CD (prompt updates, tool swaps)
+- ✅ Launch AgentOps dashboard (success rate, hallucination, cost)
+- 🔧 Missing: policy engine, rollback, canary testing, compliance hooks
+
+---
+
+## 🛡️ Cross-Cutting Enablers (Must Be Curated Throughout)
+
+| Enabler | Description | Owner |
+|---------|-------------|-------|
+| **Unified Control Plane** | Agent registry, deployment, monitoring | AI Platform |
+| **IAM & Policy Engine** | RBAC/ABAC, tool/data access, audit | Security & Compliance |
+| **AgentOps** | Observability, debugging, performance tracking | AI Ops |
+| **CI/CD for Agents** | GitOps-style deployment, rollback, versioning | DevOps |
+| **LOB Templates** | Domain-specific agent blueprints | AI Strategy |
+
+---
+
+## 🚀 Final Outcome: Self-Evolving Agents
+
+These agents will:
+- Learn from feedback and revise their strategies
+- Adapt tool usage and memory based on context
+- Collaborate across roles and domains
+- Operate within governed, compliant, and cost-aware boundaries
+
+---
